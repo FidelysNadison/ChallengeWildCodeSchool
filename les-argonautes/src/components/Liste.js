@@ -47,8 +47,6 @@ function Liste() {
       <Todo
         todos={todos}
         completeTodo={completeTodo}
-        removeTodo={removeTodo}
-        updateTodo={updateTodo}
       />
     </>
   );
