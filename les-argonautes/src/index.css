@@ -6,7 +6,7 @@ body {
 }
 
 main {
-  max-width: 960px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -25,6 +25,11 @@ header h1 {
 }
 h1, h2 {
   text-align: center;
+}
+button{
+  background-color: #f76c6c;
+  border: solid 2px #f76c6c ;
+  color: #f4f4f4;
 }
 
 label {

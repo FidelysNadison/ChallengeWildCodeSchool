@@ -1,14 +1,43 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
-export default function Createargonautes() {
+function Createargonautes(props) {
+  const [input, setInput] = useState(props.edit ? props.edit.value : '');
+
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  });
+
+  const handleChange = e => {
+    setInput(e.target.value);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    props.onSubmit({
+      id: Math.floor(Math.random() * 10000),
+      text: input
+    });
+    setInput('');
+  };
   return (
-    <main>
-      <h2>Ajouter un(e) Argonaute</h2>
-      <form class="new-member-form" method="GET">
-        <label  for="name">Nom de l&apos;Argonaute </label>
-        <input id="name" name="name" type="text" placeholder="Charalampos" />
-        <button type="submit">Ajouter</button>
-      </form>
-    </main>
+    <form onSubmit={handleSubmit} className='new-member-form'>
+          <label for="name">Nom de l&apos;Argonaute</label>
+          <input
+            placeholder='Charalampos'
+            value={input}
+            onChange={handleChange}
+            name='text'
+            class='new-member-form'
+            ref={inputRef}
+          />
+          <button onClick={handleSubmit}>
+            Ajouter
+          </button>
+    </form>
   );
 }
+
+export default Createargonautes;

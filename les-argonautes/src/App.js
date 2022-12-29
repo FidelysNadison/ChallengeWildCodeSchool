@@ -1,16 +1,18 @@
 import React from "react";
 import Header from "./components/Header";
+import Liste from "./components/Liste"
 import Footer from "./components/Footer";
-import Createargonautes from "./components/Createargonautes";
-import Liste from "./components/Liste";
 
-export default function App() {
+
+
+function App() {
     return (
-      <main>
+      <div className="App">
         <Header/>
-        <Createargonautes/>
         <Liste/>
         <Footer/>
-      </main>
+      </div>
     );
-  }
+}
+
+export default App;
