@@ -1,39 +1,36 @@
 import React, { useState } from 'react';
 import Createargonautes from './Createargonautes';
-import Todo from './Todo';
+import Argo from './Argo';
 
 function Liste() {
-  const [todos, setTodos] = useState([]);
+  const [argos, setArgos] = useState([]);
 
-  const addTodo = todo => {
-    if (!todo.text || /^\s*$/.test(todo.text)) {
+  const addArgo = argo => {
+    if (!argo.text || /^\s*$/.test(argo.text)) {
       return;
     }
 
-    const newTodos = [todo, ...todos];
+    const newArgos = [argo, ...argos];
 
-    setTodos(newTodos);
-    console.log(...todos);
+    setArgos(newArgos);
+    console.log(...argos);
   };
 
-  const completeTodo = id => {
-    let updatedTodos = todos.map(todo => {
-      if (todo.id === id) {
-        todo.isComplete = !todo.isComplete;
+  const completeArgo = id => {
+    let updatedArgos = argos.map(argo => {
+      if (argo.id === id) {
+        argo.isComplete = !argo.isComplete;
       }
-      return todo;
+      return argo;
     });
-    setTodos(updatedTodos);
+    setArgos(updatedArgos);
   };
 
   return (
     <>
       <h2>Ajouter un(e) Argonaute</h2>
-      <Createargonautes onSubmit={addTodo} />
-      <Todo
-        todos={todos}
-        completeTodo={completeTodo}
-      />
+      <Createargonautes onSubmit={addArgo} />
+      <Argo argos={argos} completeTodo={completeArgo}/>
     </>
   );
 }
