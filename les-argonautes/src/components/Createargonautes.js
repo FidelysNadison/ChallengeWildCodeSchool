@@ -23,7 +23,7 @@ function Createargonautes(props) {
     setInput('');
   };
   return (
-    <form onSubmit={handleSubmit} className='new-member-form'>
+    <form action='argo.php' method='post' onSubmit={handleSubmit} className='new-member-form'>
           <label for="name">Nom de l&apos;Argonaute</label>
           <input
             placeholder='Charalampos'
