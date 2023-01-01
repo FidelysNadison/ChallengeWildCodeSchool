@@ -46,6 +46,10 @@ label {
   padding: 0.25em 0;
 }
 
+.argo-row {
+  text-align: center;
+}
+
 footer {
   position: absolute;
   bottom: 0;

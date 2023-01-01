@@ -6,6 +6,7 @@ const Argo = ({ argos, completeArgo }) => {
       className={argo.isComplete ? 'argo-row complete' : 'argo-row'}
       key={index}
     >
+      <h2>Membres de l'équipage</h2>
       <div key={argo.id} onClick={() => completeArgo(argo.id)}>
         {argo.text}
       </div>
