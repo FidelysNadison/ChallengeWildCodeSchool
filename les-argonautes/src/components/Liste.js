@@ -27,12 +27,14 @@ function Liste() {
   };
 
   return (
-    <>
+    <main>
       <h2>Ajouter un(e) Argonaute</h2>
       <Createargonautes onSubmit={addArgo} />
-      <Argo argos={argos} completeTodo={completeArgo}/>
-    </>
-    
+      <div>
+      <h2>Membres de l'équipage</h2>
+          <Argo argos={argos} completeTodo={completeArgo}/>
+      </div>
+    </main>
   );
 }
 
