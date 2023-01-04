@@ -1,5 +1,5 @@
 export const dure = [
-    "Eleftheria",
-    "Gennadios",
-    "Lysimachos",
+    " Eleftheria " ,
+    " Gennadios " ,
+    " Lysimachos " ,
   ];

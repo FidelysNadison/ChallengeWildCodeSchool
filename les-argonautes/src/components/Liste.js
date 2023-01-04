@@ -33,8 +33,9 @@ function Liste() {
       <Createargonautes onSubmit={addArgo} />
       <div>
       <h2>Membres de l'équipage</h2>
-          <Argo argos={argos} completeTodo={completeArgo}/>
-          {dure}
+        <span class='dure'>{ dure }</span>
+        <Argo argos={argos} completeTodo={completeArgo}/>
+          
       </div>
     </main>
   );
