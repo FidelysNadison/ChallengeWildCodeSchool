@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Createargonautes from './Createargonautes';
 import Argo from './Argo';
+import { dure } from "../data";
 
 function Liste() {
   const [argos, setArgos] = useState([]);
@@ -33,6 +34,7 @@ function Liste() {
       <div>
       <h2>Membres de l'équipage</h2>
           <Argo argos={argos} completeTodo={completeArgo}/>
+          {dure}
       </div>
     </main>
   );

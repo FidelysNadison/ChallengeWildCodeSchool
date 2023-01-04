@@ -1,14 +1,4 @@
 import React from "react";
-import { dataArgo } from "../data";
-
-
-export default function dataArgo(){
-  return (
-      <section>
-          <span> {dataArgo} </span>
-      </section>
-  )
-}
 
 const Argo = ({ argos, completeArgo }) => {
   return argos.map((argo, index) => (
@@ -23,3 +13,4 @@ const Argo = ({ argos, completeArgo }) => {
   ));
 };
 export default Argo;
+

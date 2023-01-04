@@ -1,4 +1,4 @@
-export const argonautes = [
+export const dure = [
     "Eleftheria",
     "Gennadios",
     "Lysimachos",
